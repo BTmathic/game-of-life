@@ -96,6 +96,159 @@ export default class GameWindow extends React.Component {
         this.setState(() => ({ runGame: true }));
     }
 
+    setPulsar = () => {
+        this.resetBoard();
+        this.pauseGame();
+        setTimeout(() => { // ensure the previous states have been set so board is clear
+            let gameBoard = this.state.gameBoard;
+            gameBoard[17][27] = 'alive'; gameBoard[17][41] = 'alive';
+            gameBoard[17][28] = 'alive'; gameBoard[17][40] = 'alive';
+            gameBoard[17][29] = 'alive'; gameBoard[17][39] = 'alive';
+            gameBoard[18][29] = 'alive'; gameBoard[18][39] = 'alive';
+            gameBoard[18][31] = 'alive'; gameBoard[18][37] = 'alive';
+            gameBoard[19][31] = 'alive'; gameBoard[19][37] = 'alive';
+            gameBoard[19][32] = 'alive'; gameBoard[19][36] = 'alive';
+            gameBoard[18][33] = 'alive'; gameBoard[18][35] = 'alive';
+            gameBoard[17][33] = 'alive'; gameBoard[17][35] = 'alive';
+            gameBoard[17][32] = 'alive'; gameBoard[17][36] = 'alive';
+            gameBoard[15][32] = 'alive'; gameBoard[15][36] = 'alive';
+            gameBoard[15][31] = 'alive'; gameBoard[15][37] = 'alive';
+            gameBoard[14][31] = 'alive'; gameBoard[14][37] = 'alive';
+            gameBoard[13][31] = 'alive'; gameBoard[13][37] = 'alive';
+            gameBoard[23][27] = 'alive'; gameBoard[23][41] = 'alive';
+            gameBoard[23][28] = 'alive'; gameBoard[23][40] = 'alive';
+            gameBoard[23][29] = 'alive'; gameBoard[23][39] = 'alive';
+            gameBoard[22][29] = 'alive'; gameBoard[22][39] = 'alive';
+            gameBoard[22][31] = 'alive'; gameBoard[22][37] = 'alive';
+            gameBoard[21][31] = 'alive'; gameBoard[21][37] = 'alive';
+            gameBoard[21][32] = 'alive'; gameBoard[21][36] = 'alive';
+            gameBoard[22][33] = 'alive'; gameBoard[22][35] = 'alive';
+            gameBoard[23][33] = 'alive'; gameBoard[23][35] = 'alive';
+            gameBoard[23][32] = 'alive'; gameBoard[23][36] = 'alive';
+            gameBoard[25][32] = 'alive'; gameBoard[25][36] = 'alive';
+            gameBoard[25][31] = 'alive'; gameBoard[25][37] = 'alive';
+            gameBoard[26][31] = 'alive'; gameBoard[26][37] = 'alive';
+            gameBoard[27][31] = 'alive'; gameBoard[27][37] = 'alive';
+            this.setState(() => ({ gameBoard }));
+        }, 100);
+    }
+
+    setPentadecathlon = () => {
+        this.resetBoard();
+        this.pauseGame();
+        setTimeout(() => { // ensure the previous states have been set so board is clear
+            let gameBoard = this.state.gameBoard;
+            gameBoard[14][35] = 'alive';
+            gameBoard[15][35] = 'alive';
+            gameBoard[16][34] = 'alive';
+            gameBoard[16][36] = 'alive';
+            gameBoard[17][35] = 'alive';
+            gameBoard[18][35] = 'alive';
+            gameBoard[19][35] = 'alive';
+            gameBoard[20][35] = 'alive';
+            gameBoard[21][34] = 'alive';
+            gameBoard[21][36] = 'alive';
+            gameBoard[22][35] = 'alive';
+            gameBoard[23][35] = 'alive';
+            this.setState(() => ({ gameBoard }));
+        }, 100);
+    }
+
+    setGlider = () => {
+        this.resetBoard();
+        this.pauseGame();
+        setTimeout(() => { // ensure the previous states have been set so board is clear
+            let gameBoard = this.state.gameBoard;
+            gameBoard[1][2] = 'alive';
+            gameBoard[2][3] = 'alive';
+            gameBoard[3][1] = 'alive';
+            gameBoard[3][2] = 'alive';
+            gameBoard[3][3] = 'alive';
+            this.setState(() => ({ gameBoard }));
+        }, 100);
+    }
+
+    setSpaceship = () => {
+        this.resetBoard();
+        this.pauseGame();
+        setTimeout(() => { // ensure the previous states have been set so board is clear
+            let gameBoard = this.state.gameBoard;
+            gameBoard[21][2] = 'alive';
+            gameBoard[19][2] = 'alive';
+            gameBoard[18][3] = 'alive';
+            gameBoard[18][4] = 'alive';
+            gameBoard[18][5] = 'alive';
+            gameBoard[18][6] = 'alive';
+            gameBoard[19][6] = 'alive';
+            gameBoard[20][6] = 'alive';
+            gameBoard[21][5] = 'alive';
+            this.setState(() => ({ gameBoard }));
+        }, 100);
+    }
+
+    setGliderGun = () => {
+        this.resetBoard();
+        this.pauseGame();
+        setTimeout(() => { // ensure the previous states have been set so board is clear
+            let gameBoard = this.state.gameBoard;
+            gameBoard[5][1] = 'alive'; gameBoard[3][35] = 'alive'; 
+            gameBoard[6][1] = 'alive'; gameBoard[3][36] = 'alive';
+            gameBoard[6][2] = 'alive'; gameBoard[4][36] = 'alive';
+            gameBoard[5][2] = 'alive'; gameBoard[4][35] = 'alive';
+            gameBoard[5][11] = 'alive'; gameBoard[5][21] = 'alive';
+            gameBoard[6][11] = 'alive'; gameBoard[4][21] = 'alive';
+            gameBoard[7][11] = 'alive'; gameBoard[3][21] = 'alive';
+            gameBoard[8][12] = 'alive'; gameBoard[3][22] = 'alive';
+            gameBoard[9][13] = 'alive'; gameBoard[4][22] = 'alive';
+            gameBoard[9][14] = 'alive'; gameBoard[5][22] = 'alive';
+            gameBoard[8][16] = 'alive'; gameBoard[6][23] = 'alive';
+            gameBoard[7][17] = 'alive'; gameBoard[2][23] = 'alive';
+            gameBoard[6][17] = 'alive'; gameBoard[1][25] = 'alive';
+            gameBoard[5][17] = 'alive'; gameBoard[2][25] = 'alive';
+            gameBoard[6][15] = 'alive'; gameBoard[6][25] = 'alive';
+            gameBoard[6][18] = 'alive'; gameBoard[7][25] = 'alive';
+            gameBoard[4][16] = 'alive';
+            gameBoard[3][14] = 'alive';
+            gameBoard[3][13] = 'alive';
+            gameBoard[4][12] = 'alive';
+            this.setState(() => ({ gameBoard }));
+        }, 100);
+    }
+
+    setDieHard = () => {
+        this.resetBoard();
+        this.pauseGame();
+        setTimeout(() => { // ensure the previous states have been set so board is clear
+            let gameBoard = this.state.gameBoard;
+            gameBoard[18][31] = 'alive';
+            gameBoard[18][32] = 'alive';
+            gameBoard[19][32] = 'alive';
+            gameBoard[19][36] = 'alive';
+            gameBoard[19][37] = 'alive';
+            gameBoard[19][38] = 'alive';
+            gameBoard[17][37] = 'alive';
+            this.setState(() => ({ gameBoard }));
+        }, 100);
+    }
+
+    setLifespan = () => {
+        setTimeout(() => { // setTimeout() is needed instead of setInterval() to update speed
+            if (this.state.runGame) {
+                // Update game
+                this.handleGameStep();
+                this.setState((prevState) => {
+                    return (
+                        {
+                            generation: prevState.generation+1
+                        }
+                    );
+                });
+            }
+            this.setLifespan();
+        }, this.state.gameSpeed);
+    }
+
+    // adjust speed in setLifespan()
     setSlowSpeed = () => { this.setState(() => ({ gameSpeed: 500 })); }
     setMedSpeed = () => { this.setState(() => ({ gameSpeed: 200 })); }
     setFastSpeed = () => { this.setState(() => ({ gameSpeed: 50 })); }
@@ -128,23 +281,6 @@ export default class GameWindow extends React.Component {
                 onClick={() => {this.toggleLife(index)}}
             ></div>
         );
-    }
-
-    setLifespan = () => {
-        setTimeout(() => {
-            if (this.state.runGame) {
-                // Update game
-                this.handleGameStep();
-                this.setState((prevState) => {
-                    return (
-                        {
-                            generation: prevState.generation+1
-                        }
-                    );
-                });
-            }
-            this.setLifespan();
-        }, this.state.gameSpeed);
     }
 
     setGameBoard = () => {
@@ -223,14 +359,14 @@ export default class GameWindow extends React.Component {
                         <div className='preset-bar'>
                             <div className='preset-contents'>
                                 <div className='top-presets'>
-                                    <button>Pulsar</button>
-                                    <button>Pentadecathlon</button>
-                                    <button>Glider</button>
+                                    <button onClick={() => {this.setPulsar()}}>Pulsar</button>
+                                    <button onClick={() => {this.setPentadecathlon()}}>Pentadecathlon</button>
+                                    <button onClick={() => {this.setGlider()}}>Glider</button>
                                 </div>
                                 <div className='bottom-presets'>
-                                    <button>Spaceship</button>
-                                    <button>Glider gun</button>
-                                    <button>Inifnite pattern</button>
+                                    <button onClick={() => {this.setSpaceship()}}>Spaceship</button>
+                                    <button onClick={() => {this.setGliderGun()}}>Glider gun</button>
+                                    <button onClick={() => {this.setDieHard()}}>Die hard</button>
                                 </div>
                             </div>
                         </div>
