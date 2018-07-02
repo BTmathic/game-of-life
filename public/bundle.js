@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 18);
+/******/ 	return __webpack_require__(__webpack_require__.s = 17);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -363,9 +363,9 @@ module.exports = invariant;
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(19);
+  module.exports = __webpack_require__(18);
 } else {
-  module.exports = __webpack_require__(20);
+  module.exports = __webpack_require__(19);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
@@ -692,52 +692,6 @@ module.exports = ExecutionEnvironment;
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {
 
-function checkDCE() {
-  /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */
-  if (
-    typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === 'undefined' ||
-    typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE !== 'function'
-  ) {
-    return;
-  }
-  if (process.env.NODE_ENV !== 'production') {
-    // This branch is unreachable because this function is only called
-    // in production, but the condition is true only in development.
-    // Therefore if the branch is still here, dead code elimination wasn't
-    // properly applied.
-    // Don't change the message. React DevTools relies on it. Also make sure
-    // this message doesn't occur elsewhere in this function, or it will cause
-    // a false positive.
-    throw new Error('^_^');
-  }
-  try {
-    // Verify that the code above has been dead code eliminated (DCE'd).
-    __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE(checkDCE);
-  } catch (err) {
-    // DevTools shouldn't crash React, no matter what.
-    // We should still report in case we break this code.
-    console.error(err);
-  }
-}
-
-if (process.env.NODE_ENV === 'production') {
-  // DCE check should happen before ReactDOM bundle executes so that
-  // DevTools can report bad minification during injection.
-  checkDCE();
-  module.exports = __webpack_require__(21);
-} else {
-  module.exports = __webpack_require__(24);
-}
-
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ }),
-/* 11 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {
-
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -813,7 +767,7 @@ module.exports = EventListener;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 12 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -884,7 +838,7 @@ function shallowEqual(objA, objB) {
 module.exports = shallowEqual;
 
 /***/ }),
-/* 13 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -927,7 +881,7 @@ function containsNode(outerNode, innerNode) {
 module.exports = containsNode;
 
 /***/ }),
-/* 14 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -957,7 +911,7 @@ function focusNode(node) {
 module.exports = focusNode;
 
 /***/ }),
-/* 15 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -999,7 +953,7 @@ function getActiveElement(doc) /*?DOMElement*/{
 module.exports = getActiveElement;
 
 /***/ }),
-/* 16 */
+/* 15 */
 /***/ (function(module, exports) {
 
 /*
@@ -1081,7 +1035,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 17 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -1440,7 +1394,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 18 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1450,7 +1404,7 @@ var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(10);
+var _reactDom = __webpack_require__(20);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -1467,7 +1421,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 _reactDom2.default.render(_react2.default.createElement(_gameOfLife2.default, null), document.getElementById('app')); // reset all browser conventions
 
 /***/ }),
-/* 19 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1497,7 +1451,7 @@ module.exports={Children:{map:S.map,forEach:S.forEach,count:S.count,toArray:S.to
 
 
 /***/ }),
-/* 20 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3203,6 +3157,52 @@ module.exports = ReactEntry;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
+/* 20 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {
+
+function checkDCE() {
+  /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */
+  if (
+    typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === 'undefined' ||
+    typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE !== 'function'
+  ) {
+    return;
+  }
+  if (process.env.NODE_ENV !== 'production') {
+    // This branch is unreachable because this function is only called
+    // in production, but the condition is true only in development.
+    // Therefore if the branch is still here, dead code elimination wasn't
+    // properly applied.
+    // Don't change the message. React DevTools relies on it. Also make sure
+    // this message doesn't occur elsewhere in this function, or it will cause
+    // a false positive.
+    throw new Error('^_^');
+  }
+  try {
+    // Verify that the code above has been dead code eliminated (DCE'd).
+    __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE(checkDCE);
+  } catch (err) {
+    // DevTools shouldn't crash React, no matter what.
+    // We should still report in case we break this code.
+    console.error(err);
+  }
+}
+
+if (process.env.NODE_ENV === 'production') {
+  // DCE check should happen before ReactDOM bundle executes so that
+  // DevTools can report bad minification during injection.
+  checkDCE();
+  module.exports = __webpack_require__(21);
+} else {
+  module.exports = __webpack_require__(24);
+}
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
 /* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3217,7 +3217,7 @@ module.exports = ReactEntry;
  LICENSE file in the root directory of this source tree.
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var aa=__webpack_require__(3);__webpack_require__(2);var l=__webpack_require__(9),n=__webpack_require__(4),ba=__webpack_require__(11),ca=__webpack_require__(1),da=__webpack_require__(5),ea=__webpack_require__(12),fa=__webpack_require__(13),ha=__webpack_require__(14),ia=__webpack_require__(15);
+var aa=__webpack_require__(3);__webpack_require__(2);var l=__webpack_require__(9),n=__webpack_require__(4),ba=__webpack_require__(10),ca=__webpack_require__(1),da=__webpack_require__(5),ea=__webpack_require__(11),fa=__webpack_require__(12),ha=__webpack_require__(13),ia=__webpack_require__(14);
 function w(a){for(var b=arguments.length-1,c="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,d=0;d<b;d++)c+="\x26args[]\x3d"+encodeURIComponent(arguments[d+1]);b=Error(c+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}aa?void 0:w("227");
 function ja(a){switch(a){case "svg":return"http://www.w3.org/2000/svg";case "math":return"http://www.w3.org/1998/Math/MathML";default:return"http://www.w3.org/1999/xhtml"}}
 var ka={Namespaces:{html:"http://www.w3.org/1999/xhtml",mathml:"http://www.w3.org/1998/Math/MathML",svg:"http://www.w3.org/2000/svg"},getIntrinsicNamespace:ja,getChildNamespace:function(a,b){return null==a||"http://www.w3.org/1999/xhtml"===a?ja(b):"http://www.w3.org/2000/svg"===a&&"foreignObject"===b?"http://www.w3.org/1999/xhtml":a}},la=null,oa={};
@@ -3546,7 +3546,7 @@ var react = __webpack_require__(3);
 var invariant = __webpack_require__(2);
 var ExecutionEnvironment = __webpack_require__(9);
 var _assign = __webpack_require__(4);
-var EventListener = __webpack_require__(11);
+var EventListener = __webpack_require__(10);
 var require$$0 = __webpack_require__(6);
 var hyphenateStyleName = __webpack_require__(25);
 var emptyFunction = __webpack_require__(1);
@@ -3555,10 +3555,10 @@ var performanceNow = __webpack_require__(29);
 var propTypes = __webpack_require__(31);
 var emptyObject = __webpack_require__(5);
 var checkPropTypes = __webpack_require__(7);
-var shallowEqual = __webpack_require__(12);
-var containsNode = __webpack_require__(13);
-var focusNode = __webpack_require__(14);
-var getActiveElement = __webpack_require__(15);
+var shallowEqual = __webpack_require__(11);
+var containsNode = __webpack_require__(12);
+var focusNode = __webpack_require__(13);
+var getActiveElement = __webpack_require__(14);
 
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -21627,18 +21627,12 @@ module.exports = function() {
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = __webpack_require__(10);
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
 
 var _gameWindow = __webpack_require__(35);
 
@@ -21646,59 +21640,22 @@ var _gameWindow2 = _interopRequireDefault(_gameWindow);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var GameOfLife = function (_React$Component) {
-    _inherits(GameOfLife, _React$Component);
-
-    function GameOfLife() {
-        var _ref;
-
-        var _temp, _this, _ret;
-
-        _classCallCheck(this, GameOfLife);
-
-        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-            args[_key] = arguments[_key];
-        }
-
-        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = GameOfLife.__proto__ || Object.getPrototypeOf(GameOfLife)).call.apply(_ref, [this].concat(args))), _this), _this.state = {}, _temp), _possibleConstructorReturn(_this, _ret);
-    }
-
-    _createClass(GameOfLife, [{
-        key: 'componentDidMount',
-        value: function componentDidMount() {
-            // load random game of life
-
-        }
-    }, {
-        key: 'render',
-        value: function render() {
-            return _react2.default.createElement(
-                'div',
-                null,
-                _react2.default.createElement(
-                    'div',
-                    { className: 'title' },
-                    _react2.default.createElement(
-                        'h1',
-                        null,
-                        'Game of life'
-                    )
-                ),
-                _react2.default.createElement(_gameWindow2.default, null)
-            );
-        }
-    }]);
-
-    return GameOfLife;
-}(_react2.default.Component);
-
-exports.default = GameOfLife;
+exports.default = function () {
+  return _react2.default.createElement(
+    'div',
+    null,
+    _react2.default.createElement(
+      'div',
+      { className: 'title' },
+      _react2.default.createElement(
+        'h1',
+        null,
+        'Game of life'
+      )
+    ),
+    _react2.default.createElement(_gameWindow2.default, null)
+  );
+};
 
 /***/ }),
 /* 35 */
@@ -21708,7 +21665,7 @@ exports.default = GameOfLife;
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -21726,521 +21683,525 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var GameWindow = function (_React$Component) {
-    _inherits(GameWindow, _React$Component);
+  _inherits(GameWindow, _React$Component);
 
-    function GameWindow() {
-        var _ref;
+  function GameWindow() {
+    var _ref;
 
-        var _temp, _this, _ret;
+    var _temp, _this, _ret;
 
-        _classCallCheck(this, GameWindow);
+    _classCallCheck(this, GameWindow);
 
-        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-            args[_key] = arguments[_key];
-        }
-
-        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = GameWindow.__proto__ || Object.getPrototypeOf(GameWindow)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-            generation: 0,
-            boardHeight: 40,
-            boardWidth: 70,
-            gameBoard: [],
-            gameSpeed: 200, // milliseconds for each generation step
-            runGame: true
-        }, _this.toggleLife = function (tileID) {
-            var gameBoard = _this.state.gameBoard;
-            if (gameBoard[tileID[0]][tileID[1]] === 'alive') {
-                gameBoard[tileID[0]][tileID[1]] = 'dead';
-            } else {
-                gameBoard[tileID[0]][tileID[1]] = 'alive';
-            }
-            _this.setState(function () {
-                return { gameBoard: gameBoard };
-            });
-        }, _this.countLiveNeighbours = function (tile, index) {
-            var topRow = index[0] === 0 ? _this.state.boardHeight - 1 : index[0] - 1;
-            var bottomRow = index[0] === _this.state.boardHeight - 1 ? 0 : index[0] + 1;
-            // middleRow = index[0]
-            // middleCol = index[1]
-            var leftCol = index[1] === 0 ? _this.state.boardWidth - 1 : index[1] - 1;
-            var rightCol = index[1] === _this.state.boardWidth - 1 ? 0 : index[1] + 1;
-            var neighbouringIndices = [[topRow, leftCol], [topRow, index[1]], [topRow, rightCol], [index[0], leftCol], [index[0], rightCol], [bottomRow, leftCol], [bottomRow, index[1]], [bottomRow, rightCol]];
-            var numberOfLivingNeighbours = 0;
-            for (var i = 0; i < neighbouringIndices.length; i++) {
-                if (_this.state.gameBoard[neighbouringIndices[i][0]][neighbouringIndices[i][1]] === 'alive') {
-                    numberOfLivingNeighbours += 1;
-                }
-            }
-
-            return numberOfLivingNeighbours;
-        }, _this.handleGameStep = function () {
-            var gameBoard = [];
-            for (var i = 0; i < _this.state.boardHeight; i++) {
-                var newRow = [];
-                for (var j = 0; j < _this.state.boardWidth; j++) {
-                    var count = _this.countLiveNeighbours(_this.state.gameBoard[i][j], [i, j]);
-                    var newTile = undefined;
-                    // check the rules to see if the tile will be alive or dead next turn
-                    if (_this.state.gameBoard[i][j] === 'alive') {
-                        if (count === 2 || count === 3) {
-                            newTile = 'alive';
-                        } else if (count < 2 || count > 3) {
-                            newTile = 'dead';
-                        }
-                    } else {
-                        if (count === 3) {
-                            newTile = 'alive';
-                        } else {
-                            newTile = 'dead';
-                        }
-                    }
-                    newRow.push(newTile);
-                }
-                gameBoard.push(newRow);
-            }
-            _this.setState(function () {
-                return { gameBoard: gameBoard };
-            });
-        }, _this.pauseGame = function () {
-            _this.setState(function () {
-                return { runGame: false };
-            });
-        }, _this.resetBoard = function () {
-            var gameBoard = [];
-            for (var i = 0; i < _this.state.boardHeight; i++) {
-                var newRow = [];
-                for (var j = 0; j < _this.state.boardWidth; j++) {
-                    newRow.push('dead');
-                }
-                gameBoard.push(newRow);
-            }
-            _this.setState(function () {
-                return { gameBoard: gameBoard, generation: 0 };
-            });
-        }, _this.runGame = function () {
-            _this.setState(function () {
-                return { runGame: true };
-            });
-        }, _this.setPulsar = function () {
-            _this.resetBoard();
-            _this.pauseGame();
-            setTimeout(function () {
-                // ensure the previous states have been set so board is clear
-                var gameBoard = _this.state.gameBoard;
-                gameBoard[17][27] = 'alive';gameBoard[17][41] = 'alive';
-                gameBoard[17][28] = 'alive';gameBoard[17][40] = 'alive';
-                gameBoard[17][29] = 'alive';gameBoard[17][39] = 'alive';
-                gameBoard[18][29] = 'alive';gameBoard[18][39] = 'alive';
-                gameBoard[18][31] = 'alive';gameBoard[18][37] = 'alive';
-                gameBoard[19][31] = 'alive';gameBoard[19][37] = 'alive';
-                gameBoard[19][32] = 'alive';gameBoard[19][36] = 'alive';
-                gameBoard[18][33] = 'alive';gameBoard[18][35] = 'alive';
-                gameBoard[17][33] = 'alive';gameBoard[17][35] = 'alive';
-                gameBoard[17][32] = 'alive';gameBoard[17][36] = 'alive';
-                gameBoard[15][32] = 'alive';gameBoard[15][36] = 'alive';
-                gameBoard[15][31] = 'alive';gameBoard[15][37] = 'alive';
-                gameBoard[14][31] = 'alive';gameBoard[14][37] = 'alive';
-                gameBoard[13][31] = 'alive';gameBoard[13][37] = 'alive';
-                gameBoard[23][27] = 'alive';gameBoard[23][41] = 'alive';
-                gameBoard[23][28] = 'alive';gameBoard[23][40] = 'alive';
-                gameBoard[23][29] = 'alive';gameBoard[23][39] = 'alive';
-                gameBoard[22][29] = 'alive';gameBoard[22][39] = 'alive';
-                gameBoard[22][31] = 'alive';gameBoard[22][37] = 'alive';
-                gameBoard[21][31] = 'alive';gameBoard[21][37] = 'alive';
-                gameBoard[21][32] = 'alive';gameBoard[21][36] = 'alive';
-                gameBoard[22][33] = 'alive';gameBoard[22][35] = 'alive';
-                gameBoard[23][33] = 'alive';gameBoard[23][35] = 'alive';
-                gameBoard[23][32] = 'alive';gameBoard[23][36] = 'alive';
-                gameBoard[25][32] = 'alive';gameBoard[25][36] = 'alive';
-                gameBoard[25][31] = 'alive';gameBoard[25][37] = 'alive';
-                gameBoard[26][31] = 'alive';gameBoard[26][37] = 'alive';
-                gameBoard[27][31] = 'alive';gameBoard[27][37] = 'alive';
-                _this.setState(function () {
-                    return { gameBoard: gameBoard };
-                });
-            }, 100);
-        }, _this.setPentadecathlon = function () {
-            _this.resetBoard();
-            _this.pauseGame();
-            setTimeout(function () {
-                // ensure the previous states have been set so board is clear
-                var gameBoard = _this.state.gameBoard;
-                gameBoard[14][35] = 'alive';
-                gameBoard[15][35] = 'alive';
-                gameBoard[16][34] = 'alive';
-                gameBoard[16][36] = 'alive';
-                gameBoard[17][35] = 'alive';
-                gameBoard[18][35] = 'alive';
-                gameBoard[19][35] = 'alive';
-                gameBoard[20][35] = 'alive';
-                gameBoard[21][34] = 'alive';
-                gameBoard[21][36] = 'alive';
-                gameBoard[22][35] = 'alive';
-                gameBoard[23][35] = 'alive';
-                _this.setState(function () {
-                    return { gameBoard: gameBoard };
-                });
-            }, 100);
-        }, _this.setGlider = function () {
-            _this.resetBoard();
-            _this.pauseGame();
-            setTimeout(function () {
-                // ensure the previous states have been set so board is clear
-                var gameBoard = _this.state.gameBoard;
-                gameBoard[1][2] = 'alive';
-                gameBoard[2][3] = 'alive';
-                gameBoard[3][1] = 'alive';
-                gameBoard[3][2] = 'alive';
-                gameBoard[3][3] = 'alive';
-                _this.setState(function () {
-                    return { gameBoard: gameBoard };
-                });
-            }, 100);
-        }, _this.setSpaceship = function () {
-            _this.resetBoard();
-            _this.pauseGame();
-            setTimeout(function () {
-                // ensure the previous states have been set so board is clear
-                var gameBoard = _this.state.gameBoard;
-                gameBoard[21][2] = 'alive';
-                gameBoard[19][2] = 'alive';
-                gameBoard[18][3] = 'alive';
-                gameBoard[18][4] = 'alive';
-                gameBoard[18][5] = 'alive';
-                gameBoard[18][6] = 'alive';
-                gameBoard[19][6] = 'alive';
-                gameBoard[20][6] = 'alive';
-                gameBoard[21][5] = 'alive';
-                _this.setState(function () {
-                    return { gameBoard: gameBoard };
-                });
-            }, 100);
-        }, _this.setGliderGun = function () {
-            _this.resetBoard();
-            _this.pauseGame();
-            setTimeout(function () {
-                // ensure the previous states have been set so board is clear
-                var gameBoard = _this.state.gameBoard;
-                gameBoard[5][1] = 'alive';gameBoard[3][35] = 'alive';
-                gameBoard[6][1] = 'alive';gameBoard[3][36] = 'alive';
-                gameBoard[6][2] = 'alive';gameBoard[4][36] = 'alive';
-                gameBoard[5][2] = 'alive';gameBoard[4][35] = 'alive';
-                gameBoard[5][11] = 'alive';gameBoard[5][21] = 'alive';
-                gameBoard[6][11] = 'alive';gameBoard[4][21] = 'alive';
-                gameBoard[7][11] = 'alive';gameBoard[3][21] = 'alive';
-                gameBoard[8][12] = 'alive';gameBoard[3][22] = 'alive';
-                gameBoard[9][13] = 'alive';gameBoard[4][22] = 'alive';
-                gameBoard[9][14] = 'alive';gameBoard[5][22] = 'alive';
-                gameBoard[8][16] = 'alive';gameBoard[6][23] = 'alive';
-                gameBoard[7][17] = 'alive';gameBoard[2][23] = 'alive';
-                gameBoard[6][17] = 'alive';gameBoard[1][25] = 'alive';
-                gameBoard[5][17] = 'alive';gameBoard[2][25] = 'alive';
-                gameBoard[6][15] = 'alive';gameBoard[6][25] = 'alive';
-                gameBoard[6][18] = 'alive';gameBoard[7][25] = 'alive';
-                gameBoard[4][16] = 'alive';
-                gameBoard[3][14] = 'alive';
-                gameBoard[3][13] = 'alive';
-                gameBoard[4][12] = 'alive';
-                _this.setState(function () {
-                    return { gameBoard: gameBoard };
-                });
-            }, 100);
-        }, _this.setDieHard = function () {
-            _this.resetBoard();
-            _this.pauseGame();
-            setTimeout(function () {
-                // ensure the previous states have been set so board is clear
-                var gameBoard = _this.state.gameBoard;
-                gameBoard[18][31] = 'alive';
-                gameBoard[18][32] = 'alive';
-                gameBoard[19][32] = 'alive';
-                gameBoard[19][36] = 'alive';
-                gameBoard[19][37] = 'alive';
-                gameBoard[19][38] = 'alive';
-                gameBoard[17][37] = 'alive';
-                _this.setState(function () {
-                    return { gameBoard: gameBoard };
-                });
-            }, 100);
-        }, _this.setLifespan = function () {
-            setTimeout(function () {
-                // setTimeout() is needed instead of setInterval() to update speed
-                if (_this.state.runGame) {
-                    // Update game
-                    _this.handleGameStep();
-                    _this.setState(function (prevState) {
-                        return {
-                            generation: prevState.generation + 1
-                        };
-                    });
-                }
-                _this.setLifespan();
-            }, _this.state.gameSpeed);
-        }, _this.setSlowSpeed = function () {
-            _this.setState(function () {
-                return { gameSpeed: 500 };
-            });
-        }, _this.setMedSpeed = function () {
-            _this.setState(function () {
-                return { gameSpeed: 200 };
-            });
-        }, _this.setFastSpeed = function () {
-            _this.setState(function () {
-                return { gameSpeed: 50 };
-            });
-        }, _this.setTileLife = function (tile, index) {
-            var tileClass = 'tile';
-            if (index[0] !== _this.state.boardHeight - 1) {
-                if (index[1] !== _this.state.boardWidth - 1) {
-                    tileClass = tileClass.concat(' tile-bottom tile-right');
-                } else {
-                    tileClass = tileClass.concat(' tile-bottom');
-                }
-            } else {
-                // on bottom row
-                if (index[1] !== _this.state.boardWidth - 1) {
-                    tileClass = tileClass.concat(' tile-right');
-                }
-            }
-            if (tile === 'alive') {
-                // tile is alive
-                tileClass = tileClass.concat(' tile-alive');
-            } else {
-                tileClass = tileClass.concat(' tile-dead');
-            }
-            return _react2.default.createElement('div', {
-                key: index,
-                className: tileClass,
-                id: index,
-                onClick: function onClick() {
-                    _this.toggleLife(index);
-                }
-            });
-        }, _this.setGameBoard = function () {
-            var board = [];
-            for (var i = 0; i < _this.state.boardHeight; i++) {
-                for (var j = 0; j < _this.state.boardWidth; j++) {
-                    board.push(_this.setTileLife(_this.state.gameBoard[i][j], [i, j]));
-                }
-            }
-
-            return _react2.default.createElement(
-                'div',
-                { className: 'game' },
-                board
-            );
-        }, _this.initializeGame = function () {
-            var gameBoard = [];
-            for (var i = 0; i < _this.state.boardHeight; i++) {
-                var gameBoardRow = [];
-                for (var j = 0; j < _this.state.boardWidth; j++) {
-                    if (Math.random() < 0.3) {
-                        gameBoardRow.push('alive');
-                    } else {
-                        gameBoardRow.push('dead');
-                    }
-                }
-                gameBoard.push(gameBoardRow);
-            }
-            _this.setState(function () {
-                return { gameBoard: gameBoard };
-            });
-        }, _temp), _possibleConstructorReturn(_this, _ret);
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
     }
 
-    // either remove 'tile dead' if it is present in the string, or add if otherwise
-    // lifeStatus --- a string of classNames for a tile div
-
-
-    // count how many of the 8 neighbours a given tile has (including around the edges of
-    // the board) are alive and return this number
-
-
-    // This is the main step in the game, where we check each tile's number of living
-    // neighbours and adjust the population as required
-
-
-    // Both clear the board and reset the generation count to 0
-
-
-    // adjust speed in setLifespan()
-
-
-    // Take a tile and its index and determine its corresponding JSX element
-    // based on where it is on the grid (the outer edges do not have borders)
-
-
-    // When the component first mounts the game of life starts randomly with
-    // around 30% of tiles alive
-
-
-    _createClass(GameWindow, [{
-        key: 'componentWillMount',
-
-
-        // Call the initialization of the board on page load as well as set
-        // the game active
-        value: function componentWillMount() {
-            this.initializeGame();
-            this.setLifespan();
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = GameWindow.__proto__ || Object.getPrototypeOf(GameWindow)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+      generation: 0,
+      boardHeight: 40,
+      boardWidth: 70,
+      gameBoard: [],
+      gameSpeed: 200, // milliseconds for each generation step
+      runGame: true
+    }, _this.toggleLife = function (tileID) {
+      var gameBoard = _this.state.gameBoard;
+      if (gameBoard[tileID[0]][tileID[1]] === 'alive') {
+        gameBoard[tileID[0]][tileID[1]] = 'dead';
+      } else {
+        gameBoard[tileID[0]][tileID[1]] = 'alive';
+      }
+      _this.setState(function () {
+        return { gameBoard: gameBoard };
+      });
+    }, _this.countLiveNeighbours = function (tile, index) {
+      var topRow = index[0] === 0 ? _this.state.boardHeight - 1 : index[0] - 1;
+      var bottomRow = index[0] === _this.state.boardHeight - 1 ? 0 : index[0] + 1;
+      // middleRow = index[0]
+      // middleCol = index[1]
+      var leftCol = index[1] === 0 ? _this.state.boardWidth - 1 : index[1] - 1;
+      var rightCol = index[1] === _this.state.boardWidth - 1 ? 0 : index[1] + 1;
+      var neighbouringIndices = [[topRow, leftCol], [topRow, index[1]], [topRow, rightCol], [index[0], leftCol], [index[0], rightCol], [bottomRow, leftCol], [bottomRow, index[1]], [bottomRow, rightCol]];
+      var numberOfLivingNeighbours = 0;
+      for (var i = 0; i < neighbouringIndices.length; i++) {
+        if (_this.state.gameBoard[neighbouringIndices[i][0]][neighbouringIndices[i][1]] === 'alive') {
+          numberOfLivingNeighbours += 1;
         }
-    }, {
-        key: 'render',
-        value: function render() {
-            var _this2 = this;
+      }
 
-            return _react2.default.createElement(
+      return numberOfLivingNeighbours;
+    }, _this.handleGameStep = function () {
+      var gameBoard = [];
+      for (var i = 0; i < _this.state.boardHeight; i++) {
+        var newRow = [];
+        for (var j = 0; j < _this.state.boardWidth; j++) {
+          var count = _this.countLiveNeighbours(_this.state.gameBoard[i][j], [i, j]);
+          var newTile = undefined;
+          // check the rules to see if the tile will be alive or dead next turn
+          if (_this.state.gameBoard[i][j] === 'alive') {
+            if (count === 2 || count === 3) {
+              newTile = 'alive';
+            } else if (count < 2 || count > 3) {
+              newTile = 'dead';
+            }
+          } else {
+            if (count === 3) {
+              newTile = 'alive';
+            } else {
+              newTile = 'dead';
+            }
+          }
+          newRow.push(newTile);
+        }
+        gameBoard.push(newRow);
+      }
+      _this.setState(function () {
+        return { gameBoard: gameBoard };
+      });
+    }, _this.pauseGame = function () {
+      _this.setState(function () {
+        return { runGame: false };
+      });
+    }, _this.resetBoard = function () {
+      var gameBoard = [];
+      for (var i = 0; i < _this.state.boardHeight; i++) {
+        var newRow = [];
+        for (var j = 0; j < _this.state.boardWidth; j++) {
+          newRow.push('dead');
+        }
+        gameBoard.push(newRow);
+      }
+      _this.setState(function () {
+        return { gameBoard: gameBoard, generation: 0 };
+      });
+    }, _this.runGame = function () {
+      _this.setState(function () {
+        return { runGame: true };
+      });
+    }, _this.setPulsar = function () {
+      _this.resetBoard();
+      _this.pauseGame();
+      setTimeout(function () {
+        // ensure the previous states have been set so board is clear
+        var gameBoard = _this.state.gameBoard;
+        gameBoard[17][27] = 'alive';gameBoard[17][41] = 'alive';
+        gameBoard[17][28] = 'alive';gameBoard[17][40] = 'alive';
+        gameBoard[17][29] = 'alive';gameBoard[17][39] = 'alive';
+        gameBoard[18][29] = 'alive';gameBoard[18][39] = 'alive';
+        gameBoard[18][31] = 'alive';gameBoard[18][37] = 'alive';
+        gameBoard[19][31] = 'alive';gameBoard[19][37] = 'alive';
+        gameBoard[19][32] = 'alive';gameBoard[19][36] = 'alive';
+        gameBoard[18][33] = 'alive';gameBoard[18][35] = 'alive';
+        gameBoard[17][33] = 'alive';gameBoard[17][35] = 'alive';
+        gameBoard[17][32] = 'alive';gameBoard[17][36] = 'alive';
+        gameBoard[15][32] = 'alive';gameBoard[15][36] = 'alive';
+        gameBoard[15][31] = 'alive';gameBoard[15][37] = 'alive';
+        gameBoard[14][31] = 'alive';gameBoard[14][37] = 'alive';
+        gameBoard[13][31] = 'alive';gameBoard[13][37] = 'alive';
+        gameBoard[23][27] = 'alive';gameBoard[23][41] = 'alive';
+        gameBoard[23][28] = 'alive';gameBoard[23][40] = 'alive';
+        gameBoard[23][29] = 'alive';gameBoard[23][39] = 'alive';
+        gameBoard[22][29] = 'alive';gameBoard[22][39] = 'alive';
+        gameBoard[22][31] = 'alive';gameBoard[22][37] = 'alive';
+        gameBoard[21][31] = 'alive';gameBoard[21][37] = 'alive';
+        gameBoard[21][32] = 'alive';gameBoard[21][36] = 'alive';
+        gameBoard[22][33] = 'alive';gameBoard[22][35] = 'alive';
+        gameBoard[23][33] = 'alive';gameBoard[23][35] = 'alive';
+        gameBoard[23][32] = 'alive';gameBoard[23][36] = 'alive';
+        gameBoard[25][32] = 'alive';gameBoard[25][36] = 'alive';
+        gameBoard[25][31] = 'alive';gameBoard[25][37] = 'alive';
+        gameBoard[26][31] = 'alive';gameBoard[26][37] = 'alive';
+        gameBoard[27][31] = 'alive';gameBoard[27][37] = 'alive';
+        _this.setState(function () {
+          return { gameBoard: gameBoard };
+        });
+      }, 100);
+    }, _this.setPentadecathlon = function () {
+      _this.resetBoard();
+      _this.pauseGame();
+      setTimeout(function () {
+        // ensure the previous states have been set so board is clear
+        var gameBoard = _this.state.gameBoard;
+        gameBoard[14][35] = 'alive';
+        gameBoard[15][35] = 'alive';
+        gameBoard[16][34] = 'alive';
+        gameBoard[16][36] = 'alive';
+        gameBoard[17][35] = 'alive';
+        gameBoard[18][35] = 'alive';
+        gameBoard[19][35] = 'alive';
+        gameBoard[20][35] = 'alive';
+        gameBoard[21][34] = 'alive';
+        gameBoard[21][36] = 'alive';
+        gameBoard[22][35] = 'alive';
+        gameBoard[23][35] = 'alive';
+        _this.setState(function () {
+          return { gameBoard: gameBoard };
+        });
+      }, 100);
+    }, _this.setGlider = function () {
+      _this.resetBoard();
+      _this.pauseGame();
+      setTimeout(function () {
+        // ensure the previous states have been set so board is clear
+        var gameBoard = _this.state.gameBoard;
+        gameBoard[1][2] = 'alive';
+        gameBoard[2][3] = 'alive';
+        gameBoard[3][1] = 'alive';
+        gameBoard[3][2] = 'alive';
+        gameBoard[3][3] = 'alive';
+        _this.setState(function () {
+          return { gameBoard: gameBoard };
+        });
+      }, 100);
+    }, _this.setSpaceship = function () {
+      _this.resetBoard();
+      _this.pauseGame();
+      setTimeout(function () {
+        // ensure the previous states have been set so board is clear
+        var gameBoard = _this.state.gameBoard;
+        gameBoard[21][2] = 'alive';
+        gameBoard[19][2] = 'alive';
+        gameBoard[18][3] = 'alive';
+        gameBoard[18][4] = 'alive';
+        gameBoard[18][5] = 'alive';
+        gameBoard[18][6] = 'alive';
+        gameBoard[19][6] = 'alive';
+        gameBoard[20][6] = 'alive';
+        gameBoard[21][5] = 'alive';
+        _this.setState(function () {
+          return { gameBoard: gameBoard };
+        });
+      }, 100);
+    }, _this.setGliderGun = function () {
+      _this.resetBoard();
+      _this.pauseGame();
+      setTimeout(function () {
+        // ensure the previous states have been set so board is clear
+        var gameBoard = _this.state.gameBoard;
+        gameBoard[5][1] = 'alive';gameBoard[3][35] = 'alive';
+        gameBoard[6][1] = 'alive';gameBoard[3][36] = 'alive';
+        gameBoard[6][2] = 'alive';gameBoard[4][36] = 'alive';
+        gameBoard[5][2] = 'alive';gameBoard[4][35] = 'alive';
+        gameBoard[5][11] = 'alive';gameBoard[5][21] = 'alive';
+        gameBoard[6][11] = 'alive';gameBoard[4][21] = 'alive';
+        gameBoard[7][11] = 'alive';gameBoard[3][21] = 'alive';
+        gameBoard[8][12] = 'alive';gameBoard[3][22] = 'alive';
+        gameBoard[9][13] = 'alive';gameBoard[4][22] = 'alive';
+        gameBoard[9][14] = 'alive';gameBoard[5][22] = 'alive';
+        gameBoard[8][16] = 'alive';gameBoard[6][23] = 'alive';
+        gameBoard[7][17] = 'alive';gameBoard[2][23] = 'alive';
+        gameBoard[6][17] = 'alive';gameBoard[1][25] = 'alive';
+        gameBoard[5][17] = 'alive';gameBoard[2][25] = 'alive';
+        gameBoard[6][15] = 'alive';gameBoard[6][25] = 'alive';
+        gameBoard[6][18] = 'alive';gameBoard[7][25] = 'alive';
+        gameBoard[4][16] = 'alive';
+        gameBoard[3][14] = 'alive';
+        gameBoard[3][13] = 'alive';
+        gameBoard[4][12] = 'alive';
+        _this.setState(function () {
+          return { gameBoard: gameBoard };
+        });
+      }, 100);
+    }, _this.setDieHard = function () {
+      _this.resetBoard();
+      _this.pauseGame();
+      setTimeout(function () {
+        // ensure the previous states have been set so board is clear
+        var gameBoard = _this.state.gameBoard;
+        gameBoard[18][31] = 'alive';
+        gameBoard[18][32] = 'alive';
+        gameBoard[19][32] = 'alive';
+        gameBoard[19][36] = 'alive';
+        gameBoard[19][37] = 'alive';
+        gameBoard[19][38] = 'alive';
+        gameBoard[17][37] = 'alive';
+        _this.setState(function () {
+          return { gameBoard: gameBoard };
+        });
+      }, 100);
+    }, _this.setLifespan = function () {
+      setTimeout(function () {
+        // setTimeout() is needed instead of setInterval() to update speed
+        if (_this.state.runGame) {
+          // Update game
+          _this.handleGameStep();
+          _this.setState(function (prevState) {
+            return {
+              generation: prevState.generation + 1
+            };
+          });
+        }
+        _this.setLifespan();
+      }, _this.state.gameSpeed);
+    }, _this.setSlowSpeed = function () {
+      _this.setState(function () {
+        return { gameSpeed: 500 };
+      });
+    }, _this.setMedSpeed = function () {
+      _this.setState(function () {
+        return { gameSpeed: 200 };
+      });
+    }, _this.setFastSpeed = function () {
+      _this.setState(function () {
+        return { gameSpeed: 50 };
+      });
+    }, _this.setTileLife = function (tile, index) {
+      var tileClass = 'tile';
+      if (index[0] !== _this.state.boardHeight - 1) {
+        if (index[1] !== _this.state.boardWidth - 1) {
+          tileClass = tileClass.concat(' tile-bottom tile-right');
+        } else {
+          tileClass = tileClass.concat(' tile-bottom');
+        }
+      } else {
+        // on bottom row
+        if (index[1] !== _this.state.boardWidth - 1) {
+          tileClass = tileClass.concat(' tile-right');
+        }
+      }
+      if (tile === 'alive') {
+        // tile is alive
+        tileClass = tileClass.concat(' tile-alive');
+      } else {
+        tileClass = tileClass.concat(' tile-dead');
+      }
+      return _react2.default.createElement('div', {
+        key: index,
+        className: tileClass,
+        id: index,
+        onClick: function onClick() {
+          _this.toggleLife(index);
+        }
+      });
+    }, _this.setGameBoard = function () {
+      var board = [];
+      for (var i = 0; i < _this.state.boardHeight; i++) {
+        for (var j = 0; j < _this.state.boardWidth; j++) {
+          board.push(_this.setTileLife(_this.state.gameBoard[i][j], [i, j]));
+        }
+      }
+
+      return _react2.default.createElement(
+        'div',
+        { className: 'game' },
+        board
+      );
+    }, _this.initializeGame = function () {
+      var gameBoard = [];
+      for (var i = 0; i < _this.state.boardHeight; i++) {
+        var gameBoardRow = [];
+        for (var j = 0; j < _this.state.boardWidth; j++) {
+          if (Math.random() < 0.3) {
+            gameBoardRow.push('alive');
+          } else {
+            gameBoardRow.push('dead');
+          }
+        }
+        gameBoard.push(gameBoardRow);
+      }
+      _this.setState(function () {
+        return { gameBoard: gameBoard };
+      });
+    }, _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  // either remove 'tile dead' if it is present in the string, or add if otherwise
+  // lifeStatus --- a string of classNames for a tile div
+
+
+  // count how many of the 8 neighbours a given tile has (including around the edges of
+  // the board) are alive and return this number
+
+
+  // This is the main step in the game, where we check each tile's number of living
+  // neighbours and adjust the population as required
+
+
+  // Both clear the board and reset the generation count to 0
+
+
+  // adjust speed in setLifespan()
+
+
+  // Take a tile and its index and determine its corresponding JSX element
+  // based on where it is on the grid (the outer edges do not have borders)
+
+
+  // When the component first mounts the game of life starts randomly with
+  // around 30% of tiles alive
+
+
+  _createClass(GameWindow, [{
+    key: 'componentWillMount',
+
+
+    // Call the initialization of the board on page load as well as set
+    // the game active
+    value: function componentWillMount() {
+      this.initializeGame();
+      this.setLifespan();
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      return _react2.default.createElement(
+        'div',
+        { className: 'game-container' },
+        _react2.default.createElement(
+          'div',
+          { className: 'game-window' },
+          _react2.default.createElement(
+            'div',
+            { className: 'run-pause-bar' },
+            _react2.default.createElement(
+              'div',
+              { className: 'top-button-container' },
+              _react2.default.createElement(
                 'div',
-                null,
+                { className: 'buttons' },
                 _react2.default.createElement(
-                    'div',
-                    { className: 'game-window' },
-                    _react2.default.createElement(
-                        'div',
-                        { className: 'run-pause-bar' },
-                        _react2.default.createElement(
-                            'div',
-                            { className: 'top-buttons' },
-                            _react2.default.createElement(
-                                'button',
-                                { onClick: function onClick() {
-                                        _this2.runGame();
-                                    } },
-                                'Run'
-                            ),
-                            _react2.default.createElement(
-                                'button',
-                                { onClick: function onClick() {
-                                        _this2.pauseGame();
-                                    } },
-                                'Pause'
-                            ),
-                            _react2.default.createElement(
-                                'button',
-                                { onClick: function onClick() {
-                                        _this2.pauseGame();
-                                        _this2.resetBoard();
-                                    } },
-                                'Clear'
-                            )
-                        ),
-                        _react2.default.createElement(
-                            'span',
-                            { className: 'generations' },
-                            'Generations: ',
-                            this.state.generation
-                        )
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { className: 'game-play' },
-                        this.setGameBoard()
-                    ),
-                    _react2.default.createElement(
-                        'div',
-                        { className: 'bottom-bars' },
-                        _react2.default.createElement(
-                            'div',
-                            { className: 'option-bar' },
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'option-bar-contents' },
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: 'option-bar-title' },
-                                    'Speed'
-                                ),
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: 'option-bar-buttons' },
-                                    _react2.default.createElement(
-                                        'button',
-                                        { onClick: function onClick() {
-                                                _this2.setSlowSpeed();
-                                            } },
-                                        'Slow'
-                                    ),
-                                    _react2.default.createElement(
-                                        'button',
-                                        { onClick: function onClick() {
-                                                _this2.setMedSpeed();
-                                            } },
-                                        'Med'
-                                    ),
-                                    _react2.default.createElement(
-                                        'button',
-                                        { onClick: function onClick() {
-                                                _this2.setFastSpeed();
-                                            } },
-                                        'Fast'
-                                    )
-                                )
-                            )
-                        ),
-                        _react2.default.createElement(
-                            'div',
-                            { className: 'preset-bar' },
-                            _react2.default.createElement(
-                                'div',
-                                { className: 'preset-contents' },
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: 'top-presets' },
-                                    _react2.default.createElement(
-                                        'button',
-                                        { onClick: function onClick() {
-                                                _this2.setPulsar();
-                                            } },
-                                        'Pulsar'
-                                    ),
-                                    _react2.default.createElement(
-                                        'button',
-                                        { onClick: function onClick() {
-                                                _this2.setPentadecathlon();
-                                            } },
-                                        'Pentadecathlon'
-                                    ),
-                                    _react2.default.createElement(
-                                        'button',
-                                        { onClick: function onClick() {
-                                                _this2.setGlider();
-                                            } },
-                                        'Glider'
-                                    )
-                                ),
-                                _react2.default.createElement(
-                                    'div',
-                                    { className: 'bottom-presets' },
-                                    _react2.default.createElement(
-                                        'button',
-                                        { onClick: function onClick() {
-                                                _this2.setSpaceship();
-                                            } },
-                                        'Spaceship'
-                                    ),
-                                    _react2.default.createElement(
-                                        'button',
-                                        { onClick: function onClick() {
-                                                _this2.setGliderGun();
-                                            } },
-                                        'Glider gun'
-                                    ),
-                                    _react2.default.createElement(
-                                        'button',
-                                        { onClick: function onClick() {
-                                                _this2.setDieHard();
-                                            } },
-                                        'Die hard'
-                                    )
-                                )
-                            )
-                        )
-                    )
+                  'button',
+                  { onClick: function onClick() {
+                      _this2.runGame();
+                    } },
+                  'Run'
+                ),
+                _react2.default.createElement(
+                  'button',
+                  { onClick: function onClick() {
+                      _this2.pauseGame();
+                    } },
+                  'Pause'
+                ),
+                _react2.default.createElement(
+                  'button',
+                  { onClick: function onClick() {
+                      _this2.pauseGame();
+                      _this2.resetBoard();
+                    } },
+                  'Clear'
                 )
-            );
-        }
-    }]);
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'generations' },
+              'Generations: ',
+              this.state.generation
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'game-play' },
+            this.setGameBoard()
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'bottom-bars' },
+            _react2.default.createElement(
+              'div',
+              { className: 'option-bar' },
+              _react2.default.createElement(
+                'div',
+                { className: 'option-bar-contents' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'option-bar-title' },
+                  'Speed'
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'option-bar-buttons' },
+                  _react2.default.createElement(
+                    'button',
+                    { onClick: function onClick() {
+                        _this2.setSlowSpeed();
+                      } },
+                    'Slow'
+                  ),
+                  _react2.default.createElement(
+                    'button',
+                    { onClick: function onClick() {
+                        _this2.setMedSpeed();
+                      } },
+                    'Med'
+                  ),
+                  _react2.default.createElement(
+                    'button',
+                    { onClick: function onClick() {
+                        _this2.setFastSpeed();
+                      } },
+                    'Fast'
+                  )
+                )
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'preset-bar' },
+              _react2.default.createElement(
+                'div',
+                { className: 'preset-contents' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'top-presets' },
+                  _react2.default.createElement(
+                    'button',
+                    { onClick: function onClick() {
+                        _this2.setPulsar();
+                      } },
+                    'Pulsar'
+                  ),
+                  _react2.default.createElement(
+                    'button',
+                    { onClick: function onClick() {
+                        _this2.setPentadecathlon();
+                      } },
+                    'Pentadecathlon'
+                  ),
+                  _react2.default.createElement(
+                    'button',
+                    { onClick: function onClick() {
+                        _this2.setGlider();
+                      } },
+                    'Glider'
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'bottom-presets' },
+                  _react2.default.createElement(
+                    'button',
+                    { onClick: function onClick() {
+                        _this2.setSpaceship();
+                      } },
+                    'Spaceship'
+                  ),
+                  _react2.default.createElement(
+                    'button',
+                    { onClick: function onClick() {
+                        _this2.setGliderGun();
+                      } },
+                    'Glider gun'
+                  ),
+                  _react2.default.createElement(
+                    'button',
+                    { onClick: function onClick() {
+                        _this2.setDieHard();
+                      } },
+                    'Die hard'
+                  )
+                )
+              )
+            )
+          )
+        )
+      );
+    }
+  }]);
 
-    return GameWindow;
+  return GameWindow;
 }(_react2.default.Component);
 
 exports.default = GameWindow;
@@ -22260,7 +22221,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(17)(content, options);
+var update = __webpack_require__(16)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -22280,7 +22241,7 @@ if(false) {
 /* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(16)(undefined);
+exports = module.exports = __webpack_require__(15)(undefined);
 // imports
 
 
@@ -22400,7 +22361,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(17)(content, options);
+var update = __webpack_require__(16)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -22420,12 +22381,12 @@ if(false) {
 /* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(16)(undefined);
+exports = module.exports = __webpack_require__(15)(undefined);
 // imports
 
 
 // module
-exports.push([module.i, "html {\n  font-size: 62.5%; }\n\nbody {\n  background: black;\n  font-family: Helvetica, Arial, sans-serif;\n  font-size: 1.6rem; }\n\nbutton {\n  cursor: pointer; }\n\nbutton:disabled {\n  cursor: default; }\n\nh1 {\n  color: white;\n  text-align: center; }\n\nbutton {\n  background: black;\n  color: white;\n  border: 2px solid #4d4d4d; }\n\n.run-pause-bar {\n  display: flex;\n  justify-content: space-between;\n  height: 3rem;\n  padding: 0.1rem 20rem;\n  width: 55rem; }\n\n.top-buttons {\n  margin: 0 auto;\n  width: 20rem; }\n\n.generations {\n  margin: auto 0; }\n\n.game-window {\n  background: gray;\n  border: 1px solid gray;\n  border-radius: 5px;\n  height: 49rem;\n  margin: 0 auto;\n  width: 79rem; }\n\n.game-play {\n  background: black;\n  height: 44rem;\n  margin: 0 auto;\n  width: 77rem; }\n\n.game {\n  display: flex;\n  flex-wrap: wrap;\n  height: 44rem;\n  margin: 1rem 0.1rem;\n  width: 77rem; }\n\n.tile {\n  height: 1rem;\n  margin: 0rem;\n  width: 1rem; }\n\n.tile-alive {\n  background: green; }\n\n.tile-dead {\n  background: black; }\n\n.tile-bottom {\n  border-bottom: 0.1rem solid green; }\n\n.tile-right {\n  border-right: 0.1rem solid green; }\n\n.bottom-bars {\n  display: flex;\n  justify-content: space-evenly; }\n\n.option-bar {\n  background: gray;\n  border-radius: 5px;\n  color: white;\n  height: 5rem;\n  margin: 0.5rem 1rem;\n  padding-bottom: 0.5rem;\n  width: 20rem; }\n\n.option-bar-title {\n  font-size: 130%;\n  padding-bottom: 0.4rem;\n  text-align: center; }\n\n.option-bar-contents {\n  margin: 0 auto;\n  width: 75%; }\n\n.preset-bar {\n  background: gray;\n  border-radius: 5px;\n  color: white;\n  display: flex;\n  height: 5rem;\n  margin: 0.5rem 1rem;\n  padding-top: 0.3rem;\n  padding-bottom: 0.2rem;\n  width: 32rem; }\n\n.preset-contents {\n  height: 100%;\n  margin: 0 auto;\n  width: 94%; }\n\n.top-presets {\n  margin: 0 auto;\n  width: 83%; }\n\n.bottom-presets {\n  margin: 0 auto;\n  width: 87%; }\n", ""]);
+exports.push([module.i, "html {\n  font-size: 62.5%; }\n\nbody {\n  background: black;\n  font-family: Helvetica, Arial, sans-serif;\n  font-size: 1.6rem; }\n\nbutton {\n  cursor: pointer; }\n\nbutton:disabled {\n  cursor: default; }\n\nh1 {\n  color: white;\n  text-align: center; }\n\n.game-container {\n  align-items: center;\n  display: flex;\n  height: 80vh;\n  justify-content: space-around; }\n\nbutton {\n  background: black;\n  color: white;\n  border: 2px solid #4d4d4d; }\n\n.run-pause-bar {\n  display: flex;\n  justify-content: space-between;\n  height: 3rem;\n  padding: 0.2rem;\n  position: relative;\n  width: 99.3%; }\n  .run-pause-bar div {\n    width: 33%; }\n  .run-pause-bar .top-button-container {\n    margin: 0 auto;\n    text-align: center; }\n    .run-pause-bar .top-button-container .buttons {\n      width: 100%; }\n  .run-pause-bar .generations {\n    position: absolute;\n    right: 3rem;\n    top: 0.3rem;\n    width: auto; }\n\n.game-window {\n  background: gray;\n  border: 1px solid gray;\n  border-radius: 5px;\n  height: 49rem;\n  margin: 0 auto;\n  width: 79rem; }\n\n.game-play {\n  background: black;\n  height: 44rem;\n  margin: 0 auto;\n  width: 77rem; }\n\n.game {\n  display: flex;\n  flex-wrap: wrap;\n  height: 44rem;\n  margin: 1rem 0.1rem;\n  width: 77rem; }\n\n.tile {\n  height: 1rem;\n  margin: 0rem;\n  width: 1rem; }\n\n.tile-alive {\n  background: green; }\n\n.tile-dead {\n  background: black; }\n\n.tile-bottom {\n  border-bottom: 0.1rem solid green; }\n\n.tile-right {\n  border-right: 0.1rem solid green; }\n\n.bottom-bars {\n  display: flex;\n  justify-content: space-evenly; }\n\n.option-bar {\n  background: gray;\n  border-radius: 5px;\n  color: white;\n  height: 5rem;\n  margin: 0.5rem 1rem;\n  padding-bottom: 0.5rem;\n  width: 20rem; }\n\n.option-bar-title {\n  font-size: 130%;\n  padding-bottom: 0.4rem;\n  text-align: center; }\n\n.option-bar-contents {\n  margin: 0 auto;\n  width: 75%; }\n\n.preset-bar {\n  background: gray;\n  border-radius: 5px;\n  color: white;\n  display: flex;\n  height: 5rem;\n  margin: 0.5rem 1rem;\n  padding-top: 0.3rem;\n  padding-bottom: 0.2rem;\n  width: 32rem; }\n\n.preset-contents {\n  height: 100%;\n  margin: 0 auto;\n  width: 94%; }\n\n.top-presets {\n  margin: 0 auto;\n  width: 83%; }\n\n.bottom-presets {\n  margin: 0 auto;\n  width: 87%; }\n", ""]);
 
 // exports
 

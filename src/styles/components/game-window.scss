@@ -1,129 +1,144 @@
 h1 {
-    color: white;
-    text-align: center;
+  color: white;
+  text-align: center;
+}
+
+.game-container {
+  align-items: center;
+  display: flex;
+  height: 80vh;
+  justify-content: space-around;
 }
 
 button {
-    background: black;
-    color: white;
-    border: 2px solid darken(gray, 20%);
+  background: black;
+  color: white;
+  border: 2px solid darken(gray, 20%);
 }
 
 .run-pause-bar {
-    display: flex;
-    justify-content: space-between;
-    height: 3rem;
-    padding: 0.1rem 20rem;
-    width: 55rem;
-}
-
-.top-buttons {
+  display: flex;
+  justify-content: space-between;
+  height: 3rem;
+  padding: 0.2rem;
+  position: relative;
+  width: 99.3%;
+  div {
+    width: 33%;
+  }
+  .top-button-container {
     margin: 0 auto;
-    width: 20rem;
-}
-
-.generations {
-    margin: auto 0;
+    text-align: center;
+    .buttons {
+      width: 100%;
+    }
+  }
+  .generations {
+    position: absolute;
+    right: 3rem;
+    top: 0.3rem;
+    width: auto;
+  }
 }
 
 // 40 x 70 tiles with 0.1rem spacing, and 1rem side margins for this base layer
 // as well as a 3rem margin for the buttons on top
 .game-window {
-    background: gray;
-    border: 1px solid gray;
-    border-radius: 5px;
-    height: 49rem;
-    margin: 0 auto;
-    width: 79rem;
+  background: gray;
+  border: 1px solid gray;
+  border-radius: 5px;
+  height: 49rem;
+  margin: 0 auto;
+  width: 79rem;
 }
 
 .game-play {
-    background: black;
-    height: 44rem;
-    margin: 0 auto;
-    width: 77rem;
+  background: black;
+  height: 44rem;
+  margin: 0 auto;
+  width: 77rem;
 }
 
 .game {
-    display: flex;
-    flex-wrap: wrap;
-    height: 44rem;
-    margin: 1rem 0.1rem;
-    width: 77rem;
+  display: flex;
+  flex-wrap: wrap;
+  height: 44rem;
+  margin: 1rem 0.1rem;
+  width: 77rem;
 }
 
 .tile {
-    height: 1rem;
-    margin: 0rem;
-    width: 1rem;
+  height: 1rem;
+  margin: 0rem;
+  width: 1rem;
 }
 
 .tile-alive {
-    background: green;
+  background: green;
 }
 
 .tile-dead {
-    background: black;
+  background: black;
 }
 
 .tile-bottom {
-    border-bottom: 0.1rem solid green;
+  border-bottom: 0.1rem solid green;
 }
 
 .tile-right {
-    border-right: 0.1rem solid green;
+  border-right: 0.1rem solid green;
 }
 
 .bottom-bars {
-    display: flex;
-    justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .option-bar {
-    background: gray;
-    border-radius: 5px;
-    color: white;
-    height: 5rem;
-    margin: 0.5rem 1rem;
-    padding-bottom: 0.5rem;
-    width: 20rem;
+  background: gray;
+  border-radius: 5px;
+  color: white;
+  height: 5rem;
+  margin: 0.5rem 1rem;
+  padding-bottom: 0.5rem;
+  width: 20rem;
 }
 
 .option-bar-title {
-    font-size: 130%;
-    padding-bottom: 0.4rem;
-    text-align: center;
+  font-size: 130%;
+  padding-bottom: 0.4rem;
+  text-align: center;
 }
 
 .option-bar-contents {
-    margin: 0 auto;
-    width: 75%;
+  margin: 0 auto;
+  width: 75%;
 }
 
 .preset-bar {
-    background: gray;
-    border-radius: 5px;
-    color: white;
-    display: flex;
-    height: 5rem;
-    margin: 0.5rem 1rem;
-    padding-top: 0.3rem;
-    padding-bottom: 0.2rem;
-    width: 32rem;
+  background: gray;
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  height: 5rem;
+  margin: 0.5rem 1rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.2rem;
+  width: 32rem;
 }
 
 .preset-contents {
-    height: 100%;
-    margin: 0 auto;
-    width: 94%;
+  height: 100%;
+  margin: 0 auto;
+  width: 94%;
 }
 
 .top-presets {
-    margin: 0 auto;
-    width: 83%;
+  margin: 0 auto;
+  width: 83%;
 }
 
 .bottom-presets {
-    margin: 0 auto;
-    width: 87%;
+  margin: 0 auto;
+  width: 87%;
 }
